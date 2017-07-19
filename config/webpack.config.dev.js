@@ -209,6 +209,7 @@ module.exports = {
                   ],
                   flexbox: 'no-2009',
                 }),
+                require('rucksack-css'),
               ],
             },
           },
@@ -235,7 +236,6 @@ module.exports = {
                 sourceMap: 'true',
                 use: [
                   poststylus([
-                    require('rucksack-css'),
                     require('postcss-flexbugs-fixes'),
                     autoprefixer({
                       browsers: [
@@ -246,6 +246,7 @@ module.exports = {
                       ],
                       flexbox: 'no-2009',
                     }),
+                    require('rucksack-css'),
                   ])
                 ]
               }

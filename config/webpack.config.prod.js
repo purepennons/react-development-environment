@@ -216,6 +216,7 @@ module.exports = {
                         ],
                         flexbox: 'no-2009',
                       }),
+                      require('rucksack-css'),
                     ],
                   },
                 },
@@ -248,7 +249,6 @@ module.exports = {
                     sourceMap: 'inline',
                     use: [
                       poststylus([
-                        require('rucksack-css'),
                         require('postcss-flexbugs-fixes'),
                         autoprefixer({
                           browsers: [
@@ -259,6 +259,7 @@ module.exports = {
                           ],
                           flexbox: 'no-2009',
                         }),
+                        require('rucksack-css'),
                       ])
                     ]
                   }
@@ -301,6 +302,11 @@ module.exports = {
     // Otherwise React will be compiled in the very slow development mode.
     new webpack.DefinePlugin(env.stringified),
     // Minify the code.
+    // Note: this won't work without ExtractTextPlugin.extract(..) in `loaders`.
+    new ExtractTextPlugin({
+      filename: cssFilename,
+    }),
+
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false,
@@ -317,10 +323,6 @@ module.exports = {
         ascii_only: true,
       },
       sourceMap: true,
-    }),
-    // Note: this won't work without ExtractTextPlugin.extract(..) in `loaders`.
-    new ExtractTextPlugin({
-      filename: cssFilename,
     }),
 
     new webpack.optimize.CommonsChunkPlugin({
