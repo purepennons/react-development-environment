@@ -3,7 +3,8 @@ import 'isomorphic-fetch'
 
 // basic styles
 import 'normalize.css'    
-import './assets/styles/index.styl'
+import './styles/index.styl'
+import './styles/index.scss'
 
 import React from 'react'
 import ReactDOM from 'react-dom'
