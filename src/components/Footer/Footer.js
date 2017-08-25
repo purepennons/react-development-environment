@@ -1,11 +1,27 @@
-import React from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import styles from './style.scss'
 
-const ReactComponent = ({}) => {
-    return (
-        <div>
-            Footer    
-        </div>
-    )
+class Footer extends Component {
+  constructor(props) {
+    super(props)
+  }
+
+  componentDidMount() {}
+
+  componentWillReceiveProps() {}
+
+  shouldComponentUpdate() {}
+
+  handleChange() {}
+
+  render() {
+    return <div className={`Footer`}>Footer</div>
+  }
 }
 
-export default ReactComponent
+Footer.propTypes = {}
+
+Footer.defaultProps = {}
+
+export default Footer

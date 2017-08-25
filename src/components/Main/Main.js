@@ -1,24 +1,41 @@
-import React from 'react';
-import {
-  Router,
-  Route,
-} from 'react-router'
+import React, { Component } from 'react'
+import { Router, Route } from 'react-router'
 
-import HeaderContainer from '../../containers/HeaderContainer'
-import FooterContainer from '../../containers/FooterContainer'
-import HomeContainer from '../../containers/HomeContainer'
+import PropTypes from 'prop-types'
+import styles from './style.scss'
 
-const Main = (props) => { 
-  return (
-    <div>
-      <HeaderContainer />
+import Header from '../Header/'
+import Home from '../Home/'
+import Footer from '../Footer/'
 
-      <Route exact path="/" component={HomeContainer} />
+class Main extends Component {
+  constructor(props) {
+    super(props)
+  }
 
-      <FooterContainer />
-    </div>
-  )  
+  componentDidMount() {}
 
+  componentWillReceiveProps() {}
+
+  shouldComponentUpdate() {}
+
+  handleChange() {}
+
+  render() {
+    return (
+      <div className={`Main`}>
+        <Header />
+
+        <Route exact path="/" component={Home} />
+
+        <Footer />
+      </div>
+    )
+  }
 }
 
-export default Main;
+Main.propTypes = {}
+
+Main.defaultProps = {}
+
+export default Main

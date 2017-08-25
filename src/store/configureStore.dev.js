@@ -10,15 +10,15 @@ import history from './history'
 const initialState = {}
 
 export default createStore(
-    rootReducer,
-    initialState,
-    compose(
-        applyMiddleware(
-            createLogger(),
-            reduxThunk,
-            promiseMiddleware(),
-            routerMiddleware(history),
-        ),
-        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-    )
+  rootReducer,
+  initialState,
+  compose(
+    applyMiddleware(
+      createLogger(),
+      reduxThunk,
+      promiseMiddleware(),
+      routerMiddleware(history)
+    ),
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  )
 )

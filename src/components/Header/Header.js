@@ -1,11 +1,27 @@
-import React from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import styles from './style.scss'
 
-const ReactComponent = ({}) => {
-    return (
-        <div>
-            Header    
-        </div>
-    )
+class Header extends Component {
+  constructor(props) {
+    super(props)
+  }
+
+  componentDidMount() {}
+
+  componentWillReceiveProps() {}
+
+  shouldComponentUpdate() {}
+
+  handleChange() {}
+
+  render() {
+    return <div className={`Header`}>Header</div>
+  }
 }
 
-export default ReactComponent
+Header.propTypes = {}
+
+Header.defaultProps = {}
+
+export default Header

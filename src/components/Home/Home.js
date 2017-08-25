@@ -1,11 +1,27 @@
-import React from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import styles from './style.scss'
 
-const ReactComponent = ({}) => {
-    return (
-        <div>
-            Home    
-        </div>
-    )
+class Home extends Component {
+  constructor(props) {
+    super(props)
+  }
+
+  componentDidMount() {}
+
+  componentWillReceiveProps() {}
+
+  shouldComponentUpdate() {}
+
+  handleChange() {}
+
+  render() {
+    return <div className={`Home`}> Home </div>
+  }
 }
 
-export default ReactComponent
+Home.propTypes = {}
+
+Home.defaultProps = {}
+
+export default Home

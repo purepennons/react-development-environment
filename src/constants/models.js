@@ -1,6 +1,6 @@
 export const AuthState = {
-    isLogin: false,
-    token: '',
-    userInfo: {},
-    validation: []
+  isLogin: false,
+  token: '',
+  userInfo: {},
+  validation: []
 }

@@ -2,7 +2,7 @@
 import 'isomorphic-fetch'
 
 // basic styles
-import 'normalize.css'    
+import 'normalize.css'
 import './styles/index.styl'
 import './styles/index.scss'
 
@@ -17,16 +17,15 @@ import history from './store/history'
 
 import registerServiceWorker from './registerServiceWorker'
 
-
 localStorage.debug = 'container:*'
 
 ReactDOM.render(
-    <Provider store={store}>
-        <ConnectedRouter history={history}>
-            <Main/>
-        </ConnectedRouter>    
-    </Provider>,
-    document.getElementById('root')
+  <Provider store={store}>
+    <ConnectedRouter history={history}>
+      <Main />
+    </ConnectedRouter>
+  </Provider>,
+  document.getElementById('root')
 )
 
 registerServiceWorker()
