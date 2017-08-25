@@ -4,6 +4,7 @@ module.exports = {
         browser: true,
         node: true
     },
+    plugins: ['react'],
     rules: {
         semi: 0,
         'react/jsx-no-bind': 0,
@@ -11,7 +12,6 @@ module.exports = {
         'react/no-did-update-set-state': 0,
         'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }]
     },
-    plugins: ['react'],
     settings: {
         'import/resolver': {
             webpack: {
